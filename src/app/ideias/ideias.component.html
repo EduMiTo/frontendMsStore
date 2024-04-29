@@ -1,0 +1,77 @@
+<!--<mat-drawer-container>
+    
+    <mat-drawer-content id = "content">
+      
+      
+ <div class="container" >
+    <div [hidden]="submitted">
+        <h1>Ask me</h1>
+        <form [formGroup] = "form" >
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input type="text" class="form-control" id="from_name" name="from_name" formControlName="from_name">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" class="form-control" id="from_email" name="from_email"  formControlName="from_email">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Phone number</mat-label>
+                <input type="text" class="form-control" id="phonenumber" name="phonenumber"  formControlName="from_phonenumber">
+              </mat-form-field>
+            
+              <mat-form-field class="example-full-width">
+                <mat-label>Leave a comment</mat-label>
+                <textarea id= matInput></textarea>
+              </mat-form-field>
+
+            <button type="submit" class="btn btn-outline-dark mt-auto">Submit</button>
+            <br>
+                <label for="name" id="result" [hidden]="!error" class="errormsg">&#9888; {{message}} &#9888;</label>
+          </form>
+    </div>
+</div>  </mat-drawer-content>
+  </mat-drawer-container>
+-->
+<div class="container" >
+  <h3>Ask me</h3>
+<form [formGroup]="userProfile" (submit)="send()">
+  <mat-form-field class="example-full-width">
+    <mat-label for="username">Name</mat-label>
+    <input matInput id="from_name" formControlName="from_name" type="text" name="from_name" mat>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label for="address">Email</mat-label>
+    <input type="email"  matInput  formControlName="from_email" id="from_email" required  >
+    <!-- <span *ngIf="address.invalid && (address.dirty || address.touched)">Data Required </span> -->
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label for="mobile">Phone-Number</mat-label>
+    <input type="text"  matInput  formControlName="phonenumber"  id="phonenumber" name="phonenumber"  >
+    <!-- <span *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)">
+      <span>Data is re</span>
+     <span *ngIf="mobile.errors.minlength" >Min 10 Length Required</span> 
+    </span> -->
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label for="address">Message</mat-label>
+    <textarea id="message" matInput  formControlName="message" matInput ></textarea>
+    <!-- <span *ngIf="address.invalid && (address.dirty || address.touched)">Data Required </span> -->
+  </mat-form-field>
+  
+  
+  
+  <div class="form-group">
+    <button type="submit" [disabled]="!userProfile.valid" class="btn btn-outline-dark mt-auto">Submit</button>
+
+  </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+   
