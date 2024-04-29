@@ -33,7 +33,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatStepperModule } from '@angular/material/stepper';
 
 import { MatInputModule } from '@angular/material/input';
-import { SelectedProductComponent } from './home/SelectedProductComponent';
+import { SelectedProductComponent } from './home/SelectedProduct.component';
 
 import { HammerModule } from '@angular/platform-browser';
 import { IgxCarouselModule } from 'igniteui-angular';

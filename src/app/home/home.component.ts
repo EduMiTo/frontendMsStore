@@ -9,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { NavbarComponent } from '../navbar/navbar.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatFormField } from '@angular/material/form-field';
-import { SelectedProductComponent } from './SelectedProductComponent';
+import { SelectedProductComponent } from './SelectedProduct.component';
 import { ISecundaryImages } from '../interface/isecundary-images';
 
 export interface DialogData {
